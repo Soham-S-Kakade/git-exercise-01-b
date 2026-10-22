@@ -9,7 +9,7 @@ class Rectangle:
         self._dy = dy
 
     def corner(self, i: int) -> Point2D:
-        assert i < 4
+        assert 0 <= i < 4
         result = Point2D(self._lower_left.x, self._lower_left.y)
         result += Vector([
             self._dx if self._is_idx_on_right_edge(i) else 0.0,
